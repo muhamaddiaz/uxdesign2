@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  animation-name: zoom;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(assets/sky.jpg);
+  background-attachment: fixed;
+  overflow: hidden;
+  z-index: -10;
+}
+
+.head-txt {
+  position: relative;
+  display: inline-block;
+  font-size: 5rem;
+  font-weight: bolder;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 20px dotted white;
+  padding: 10px 50px;
+  z-index: -1;
+}
+
+.sky {
+  position: relative;
+  color: deepskyblue;
+  z-index: -3;
+}
+
+.high {
+  position: relative;
+  color: snow;
+  z-index: -1;
+}
+
+.cloud1 {
+  position: absolute;
+  right: 25%;
+  bottom: 5%;
+  width: 100px;
+  filter: blur(5px);
+  transform: scale(10);
+}
+
+.cloud2 {
+  position: absolute;
+  right: 60%;
+  bottom: 15%;
+  width: 100px;
+  filter: blur(10px);
+  transform: scale(2);
+  z-index: -4;
+}
+
+.cloud3 {
+  position: absolute;
+  right: 70%;
+  bottom: 20%;
+  width: 100px;
+  filter: blur(10px);
+  transform: scale(1);
+  z-index: -5;
+}
+
+.airplane {
+  position: absolute;
+  width: 100px;
+  left: -10%;
+  bottom: -40%;
+  transform: scale(2) translateX(50%);
+  z-index: -5;
+}
+
+.content {
+  height: 100vh;
+  position: relative;
+  background-color: white;
+  z-index: 2;
+}
+
+.text-promo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 5rem;
+  font-weight: bold;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
